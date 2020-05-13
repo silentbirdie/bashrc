@@ -18,7 +18,7 @@ alias ports_ouverts="netstat -plantu | grep -i listen"
 alias heure="date "+%k_%M""
 
 #user variables
-
+#(path for my own programs installed from tar) PATH=${PATH}:/root/progs
 stop_service() { systemctl status "$1" >/dev/null 2>/dev/null && systemctl stop "$1" || echo "$1 n'est pas en cours..."; }
 start_service() { systemctl status "$1" >/dev/null 2>/dev/null && echo "deja en cours" ||systemctl start "$1"; }
 
