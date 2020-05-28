@@ -10,7 +10,7 @@ fi
 
 # User specific aliases and functions
 go_partage(){
-mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=chris,password=memelargebrain22
+mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=username_here,password=password_here
 }
 
 alias mv='mv -i'
