@@ -9,7 +9,10 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-
+go_partage(){
+mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=username_here,password=password_here
+}
+go(){ [ -x "$1" ] || chmod +x "$1" ; "$1"; }
 alias mv='mv -i'
 alias page="ls|less"alias page="ls|less"
 alias emacs="emacs -nw"
