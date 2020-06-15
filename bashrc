@@ -9,6 +9,7 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+socket(){ netstat -na | grep :$1; }
 go_partage(){
 mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=username_here,password=password_here
 }
@@ -16,6 +17,8 @@ go(){ [ -x "$1" ] || chmod +x "$1" ; "$1"; }
 stop_service() { systemctl status "$1" >/dev/null 2>/dev/null && systemctl stop "$1" || echo "$1 n'est pas en cours..."; }
 start_service() { systemctl status "$1" >/dev/null 2>/dev/null && echo "deja en cours" ||systemctl start "$1"; }
 alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
 alias page="ls|less"alias page="ls|less"
 alias emacs="emacs -nw"
 alias get_ip="ifconfig|grep 'inet ' | awk '{print \$2}'"
