@@ -16,6 +16,7 @@ mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=username_here,pass
 go(){ [ -x "$1" ] || chmod +x "$1" ; "$1"; }
 stop_service() { systemctl status "$1" >/dev/null 2>/dev/null && systemctl stop "$1" || echo "$1 n'est pas en cours..."; }
 start_service() { systemctl status "$1" >/dev/null 2>/dev/null && echo "deja en cours" ||systemctl start "$1"; }
+allusers() { awk -F: '{ print $1}' /etc/passwd; }
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
