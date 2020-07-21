@@ -22,7 +22,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias page="ls|less"alias page="ls|less"
 alias emacs="emacs -nw"
-alias get_ip="ifconfig|grep 'inet ' | awk '{print \$2}'"
+alias getip="ifconfig|grep 'inet ' | awk '{print \$2}'"
 alias ports_ouverts="netstat -plantu | grep -i listen"
 alias heure="date "+%k_%M""
 
