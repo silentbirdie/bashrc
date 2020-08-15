@@ -11,6 +11,7 @@ fi
 # User specific aliases and functions
 socket(){ netstat -na | grep :$1; }
 go_partage(){
+         #{1:-your_ip_goes_here}
 mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=username_here,password=password_here
 }
 go(){ [ -x "$1" ] || chmod +x "$1" ; "$1"; }
