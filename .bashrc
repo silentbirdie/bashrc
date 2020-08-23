@@ -25,6 +25,6 @@ alias emacs="emacs -nw"
 alias getip="ifconfig|grep 'inet ' | awk '{print \$2}'"
 alias ports_ouverts="netstat -plantu | grep -i listen"
 alias heure="date "+%k_%M""
-
+alias histl="history | less"
 #user variables
 set -o noclobber
