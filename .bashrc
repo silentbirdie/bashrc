@@ -9,6 +9,13 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+#renew the ip of a certain network card
+ipre(){
+dhclient -r $1
+ifdown $1
+ifup $1
+}
+
 socket(){ netstat -na | grep :$1; }
 go_partage(){
 mount //"${1:-192.168.1.183}"/shared /mnt/shared/ -o username=username_here,password=password_here
