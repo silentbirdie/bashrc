@@ -33,5 +33,11 @@ alias getip="ifconfig|grep 'inet ' | awk '{print \$2}'"
 alias ports_ouverts="netstat -plantu | grep -i listen"
 alias heure="date "+%k_%M""
 alias histl="history | less"
+alias cls="clear"
 #user variables
+
+
+
+
+#option to not overwrite if i do . in term command
 set -o noclobber
